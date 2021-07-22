@@ -55,16 +55,6 @@ curl -i -X POST \
 
 curl -i -X POST \
 --url http://localhost:8001/services/key-checker-service/routes \
---data 'name=key-checker' \
---data 'paths[]=/' \
-
-curl -i -X POST \
---url http://localhost:8001/services/ \
---data 'name=key-checker-service' \
---data 'url=https://reqres.in/api/users?page=2'
-
-curl -i -X POST \
---url http://localhost:8001/services/key-checker-service/routes \
 --data 'paths[]=/'
 
 curl -i -X POST \
