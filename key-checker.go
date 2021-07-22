@@ -42,11 +42,12 @@ func (conf Config) Access(kong *pdk.PDK) {
 		return
 	}
 
-	_ = kong.Response.SetHeader("X-Rate-Limiting-Plugin-Version", version)
+	_ = kong.Response.SetHeader("X-Key-Checker-Plugin-Version", version)
 
 	// 路由key校验
 	key, err := kong.Request.GetQueryArg("key")
 	apiKey := conf.Apikey
+	//apiKey := "apikey"
 	if err != nil {
 		kong.Log.Err(err.Error())
 	}
