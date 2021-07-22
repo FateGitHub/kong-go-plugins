@@ -8,15 +8,19 @@ import (
 	"github.com/Kong/go-pdk"
 )
 
+// Config 插件配置文件
 type Config struct {
 	Apikey string
 }
 
+// New一个插件
 func New() interface{} {
 	return &Config{}
 }
 
+// Access kong 入口
 func (conf Config) Access(kong *pdk.PDK) {
+	// 路由key校验
 	key, err := kong.Request.GetQueryArg("key")
 	apiKey := conf.Apikey
 	if err != nil {

@@ -1,11 +1,11 @@
-# go.yml
+# go.yml kong init会自动加载
 _format_version: "1.1"
-services:
+services: # 服务
   - url: https://reqres.in/api/users?page=2
-    routes:
+    routes: # 路由
       - paths:
           - "/"
-    plugins:
-      - name: key-checker
-        config:
-          apikey: mysecretconsumerkey
+    plugins: # 插件
+      - name: key-checker # 插件名
+        config: # 插件配置
+          apikey: mysecretconsumerkey # 校验key值
