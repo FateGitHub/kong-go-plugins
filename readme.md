@@ -61,3 +61,10 @@ curl -i -X POST \
 --url http://localhost:8001/services/key-checker-service/plugins/ \
 --data 'name=key-checker'
 ```
+
+# 重启
+```
+kong prepare && kong reload
+- 在konga中配置插件
+- 测试请求是否正常，规则是否生效
+```
