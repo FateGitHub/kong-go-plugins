@@ -1,0 +1,5 @@
+.idea
+/kong-go-plugins
+*.log
+bin/
+vendor/
