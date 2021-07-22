@@ -1,5 +1,5 @@
 FROM kong/go-plugin-tool:2.0.4-alpine-latest AS builder
-
+#kong/go-plugin-tool:latest-centos-7
 RUN mkdir -p /tmp/key-checker/
 
 COPY . /tmp/key-checker/
